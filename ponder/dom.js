@@ -23,7 +23,7 @@ para.classList.add('background');
 //document.querySelector('body').classList.add('background');
 
 const image = document.querySelector('img');
-image.setAttribute('src', 'pictures/web.png');
+image.setAttribute('src', 'images/web.png');
 
 
 let selectElem = document.getElementById('webdevlist');
