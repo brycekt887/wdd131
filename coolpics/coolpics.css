@@ -23,12 +23,15 @@ h1 {
 
 nav {
     margin-top: 0.5rem;
+    position: relative; 
 }
 
 .menu {
     margin: 0;
     padding: 0.5rem;
     font-size: 1rem;
+    cursor: pointer; 
+    text-decoration: underline;
 }
 
 nav ul {
@@ -36,6 +39,26 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: absolute; 
+    background-color: #2f80df; 
+    width: 100%; 
+    left: 0; 
+    right: 0; 
+    text-align: center;
+    top: 100%; 
+    text-decoration: underline;
+}
+nav ul li {
+    list-style: none; 
+}
+
+nav ul.show {
+    display: block !important; 
+}
+
+nav ul.show a {
+    display: block; 
+    padding: 0.5rem;
 }
 
 nav a {
@@ -67,6 +90,7 @@ h2 {
     object-fit: cover;
     border: 4px solid white;
     box-shadow: 4px 4px 6px #555;
+    cursor: pointer; 
 }
 
 footer {
@@ -93,10 +117,18 @@ footer {
     }
 
     nav ul {
-        display: flex;
+        display: flex !important; 
+        position: static; 
         justify-content: center;
         gap: 1.5rem;
         padding: 0.4rem 0;
+        background-color: transparent; 
+        width: auto; 
+    }
+
+    nav ul a {
+        display: inline; 
+        padding: 0; 
     }
 
     nav a {
@@ -112,4 +144,59 @@ footer {
         width: 160px;
         height: 160px;
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    position: relative;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: 0.2s;
+}
+
+.close:hover {
+    color: #bbb;
+    transform: scale(1.2);
 }

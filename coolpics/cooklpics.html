@@ -6,12 +6,18 @@
     <meta name="description" content="Cool Pics responsive design page">
     <title>Cool Pics</title>
     <link rel="stylesheet" href="coolpics.css">
+    <script src="coolpic.js" defer></script>
 </head>
 
 <body>
+    <div class="modal" id="imageModal">
+        <button class="close" id="closeModal">&times;</button>
+        <img class="modal-content" id="modalImage" alt="enlarged photo">
+    </div>
 
     <header>
         <h1>Cool Pics 📷</h1>
+        
 
         <nav>
             <p class="menu">Menu</p>
