@@ -142,7 +142,7 @@ section {
 
 
 footer {
-    max-width: 1000px;
+    max-width: auto;
     margin: 1rem auto;
     padding: 1rem;
     background-color: white;
