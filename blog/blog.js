@@ -125,5 +125,5 @@ articles.forEach(book => {
     
         bookList.appendChild(article);
     });
-    bookList.appendChild(rticle);
+    bookList.appendChild(article);
 });
